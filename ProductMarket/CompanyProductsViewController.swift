@@ -24,7 +24,7 @@ class CompanyProductsViewController: UIViewController, UITableViewDataSource {
         RestApiManager.singletonInstance.loadProducts(companyName, callBack:{
             json in
             
-            for(index, item) in json {
+            for(_, item) in json {
                 let name = item["name"].string!
                 let oldPrice = item["oldPrice"].double!
                 let newPrice = item["newPrice"].double!
@@ -41,12 +41,12 @@ class CompanyProductsViewController: UIViewController, UITableViewDataSource {
         })
     }
     
-    public func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
+    internal func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
         return products.count
     }
     
     
-    public func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell{
+    internal func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell{
         
         let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as! CompanyProductCell
         

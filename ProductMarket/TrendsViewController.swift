@@ -24,7 +24,7 @@
             RestApiManager.singletonInstance.loadTrends{
                 json in
                 
-                for(index, item) in json {
+                for(_, item) in json {
                     let name = item["name"].string!
                     let imageUrl = item["imageUrl"].string!
                     let collectionId = item["collectionID"].string!
@@ -47,7 +47,7 @@
         
         
         
-        public func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell{
+        internal func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell{
             
             let cell = tableView.dequeueReusableCellWithIdentifier("TrendCell", forIndexPath: indexPath) as! TrendTableViewCell
             

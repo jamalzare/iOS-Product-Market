@@ -26,7 +26,7 @@ class CompaniesViewController: UIViewController, UICollectionViewDataSource {
             
             let data = json
             
-            for(index, item) in data{
+            for(_, item) in data{
                 
                 let company = Company(name: item["name"].string!, totalProductCount: item["productCount"].int!)
                 

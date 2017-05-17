@@ -67,7 +67,7 @@ class HomeViewController: UIViewController, iCarouselDataSource, UICollectionVie
         RestApiManager.singletonInstance.loadBestDeals{
             json in
             
-            for(index, item) in json {
+            for(_, item) in json {
                 let name = item["name"].string!
                 let oldPrice = item["oldPrice"].double!
                 let newPrice = item["newPrice"].double!
@@ -91,7 +91,7 @@ class HomeViewController: UIViewController, iCarouselDataSource, UICollectionVie
         RestApiManager.singletonInstance.loadTodayDeals{
             json in
             
-            for(index, item) in json {
+            for(_, item) in json {
                 let name = item["name"].string!
                 let oldPrice = item["oldPrice"].double!
                 let newPrice = item["newPrice"].double!
@@ -148,7 +148,7 @@ class HomeViewController: UIViewController, iCarouselDataSource, UICollectionVie
         return itemView
     }
     
-    public func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int{
+    internal func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int{
         if(collectionView.tag == 1){
             return bestDeals.count
         }else if(collectionView.tag == 2){
@@ -158,7 +158,7 @@ class HomeViewController: UIViewController, iCarouselDataSource, UICollectionVie
     }
     
     
-    public func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell{
+    internal func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell{
         
         var product:Product!
         if(collectionView.tag == 1)

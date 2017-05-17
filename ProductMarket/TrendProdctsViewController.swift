@@ -24,10 +24,10 @@ class TrendProdctsViewController: UIViewController, UICollectionViewDataSource {
         
         RestApiManager.singletonInstance.loadTrendProducts(self.trendId,callBack: {json in
             
-            let data = json
+            _ = json
             
             
-            for(index, item) in json {
+            for(_, item) in json {
                 let name = item["name"].string!
                 let oldPrice = item["oldPrice"].double!
                 let newPrice = item["newPrice"].double!
@@ -48,13 +48,13 @@ class TrendProdctsViewController: UIViewController, UICollectionViewDataSource {
     }
     
     
-    public func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int{
+    internal func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int{
         return products.count
     }
     
     
-    public func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell{
-        var cell = collectionView.dequeueReusableCellWithReuseIdentifier("cell", forIndexPath: indexPath) as! TrendPRoductCollectionViewCell
+    internal func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell{
+        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("cell", forIndexPath: indexPath) as! TrendPRoductCollectionViewCell
         
         let product = self.products[indexPath.row]
         
