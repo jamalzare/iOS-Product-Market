@@ -42,8 +42,11 @@ class RestApiManager {
     }
     
     
-    func loadTrendProducts(trendId:String, callBack:(JSON)-> Void)  {
-        let url = "http://localhost:5000/api/trends/\(trendId)/"
+    func loadTrendProducts(trendId:Int, callBack:(JSON)-> Void)  {
+        
+        //let url = "http://localhost:5000/api/trends/\(trendId)/"
+        let url = "http://localhost:5000/api/trendProducts/"
+       
         HttpRequest(url, callBack: {
             json, error in
             callBack(json as JSON)

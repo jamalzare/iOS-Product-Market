@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		893906571ECE289A00D2197D /* TrendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893906561ECE289A00D2197D /* TrendsViewController.swift */; };
 		894655751EC751E400656254 /* ProductDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894655741EC751E400656254 /* ProductDetailsViewController.swift */; };
 		894655771EC8A71600656254 /* TrendTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894655761EC8A71600656254 /* TrendTableViewCell.swift */; };
 		894655791EC8A89300656254 /* Trend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894655781EC8A89300656254 /* Trend.swift */; };
@@ -18,7 +19,6 @@
 		895CD03D1EC0F6DF0080EE92 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 895CD03C1EC0F6DF0080EE92 /* Assets.xcassets */; };
 		895CD0401EC0F6DF0080EE92 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 895CD03E1EC0F6DF0080EE92 /* LaunchScreen.storyboard */; };
 		895CD04B1EC0F84D0080EE92 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 895CD04A1EC0F84D0080EE92 /* HomeViewController.swift */; };
-		895CD04F1EC0F8990080EE92 /* TrendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 895CD04E1EC0F8990080EE92 /* TrendsViewController.swift */; };
 		895CD0511EC0F8A50080EE92 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 895CD0501EC0F8A50080EE92 /* SearchViewController.swift */; };
 		895CD0531EC0F8B70080EE92 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 895CD0521EC0F8B70080EE92 /* AboutViewController.swift */; };
 		895CD0561EC10C560080EE92 /* Companies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 895CD0551EC10C560080EE92 /* Companies.swift */; };
@@ -35,6 +35,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		893906561ECE289A00D2197D /* TrendsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrendsViewController.swift; sourceTree = "<group>"; };
 		894655741EC751E400656254 /* ProductDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductDetailsViewController.swift; sourceTree = "<group>"; };
 		894655761EC8A71600656254 /* TrendTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrendTableViewCell.swift; sourceTree = "<group>"; };
 		894655781EC8A89300656254 /* Trend.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Trend.swift; sourceTree = "<group>"; };
@@ -48,7 +49,6 @@
 		895CD03F1EC0F6DF0080EE92 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		895CD0411EC0F6DF0080EE92 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		895CD04A1EC0F84D0080EE92 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		895CD04E1EC0F8990080EE92 /* TrendsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrendsViewController.swift; sourceTree = "<group>"; };
 		895CD0501EC0F8A50080EE92 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		895CD0521EC0F8B70080EE92 /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		895CD0551EC10C560080EE92 /* Companies.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Companies.swift; sourceTree = "<group>"; };
@@ -115,14 +115,14 @@
 		895CD0471EC0F80C0080EE92 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				897B7B821EC3ABEF002BB76E /* CompaniesViewController.swift */,
 				895CD04A1EC0F84D0080EE92 /* HomeViewController.swift */,
-				895CD04E1EC0F8990080EE92 /* TrendsViewController.swift */,
+				897B7B821EC3ABEF002BB76E /* CompaniesViewController.swift */,
+				89FDCBA01EC4E60C000868C4 /* CompanyProductsViewController.swift */,
+				8946557A1ECA3AAC00656254 /* TrendProdctsViewController.swift */,
+				894655741EC751E400656254 /* ProductDetailsViewController.swift */,
 				895CD0501EC0F8A50080EE92 /* SearchViewController.swift */,
 				895CD0521EC0F8B70080EE92 /* AboutViewController.swift */,
-				89FDCBA01EC4E60C000868C4 /* CompanyProductsViewController.swift */,
-				894655741EC751E400656254 /* ProductDetailsViewController.swift */,
-				8946557A1ECA3AAC00656254 /* TrendProdctsViewController.swift */,
+				893906561ECE289A00D2197D /* TrendsViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -270,12 +270,12 @@
 				8946557F1ECB2CBA00656254 /* TrendProduct.swift in Sources */,
 				89E73BB51ECB6FCD00F5AE29 /* iCarousel.m in Sources */,
 				8946557D1ECA3E3300656254 /* TrendPRoductCollectionViewCell.swift in Sources */,
-				895CD04F1EC0F8990080EE92 /* TrendsViewController.swift in Sources */,
 				895CD0341EC0F6DF0080EE92 /* AppDelegate.swift in Sources */,
 				895CD04B1EC0F84D0080EE92 /* HomeViewController.swift in Sources */,
 				895CD05C1EC1111E0080EE92 /* RestApiManager.swift in Sources */,
 				894655791EC8A89300656254 /* Trend.swift in Sources */,
 				89A4864B1EC52B3200B9FD66 /* CircleView.swift in Sources */,
+				893906571ECE289A00D2197D /* TrendsViewController.swift in Sources */,
 				89FDCBA51EC4EBE0000868C4 /* Product.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

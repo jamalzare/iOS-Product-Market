@@ -10,11 +10,11 @@ import Foundation
 
 class Trend {
     var name: String!
-    var collectionId: String!
+    var collectionId: Int!
     var imageUrl: String!
     
     
-    init(name: String, collectionId: String, imageUrl: String ){
+    init(name: String, collectionId: Int, imageUrl: String ){
         self.name = name
         self.collectionId = collectionId
         self.imageUrl = imageUrl

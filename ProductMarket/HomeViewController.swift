@@ -38,7 +38,7 @@ class HomeViewController: UIViewController, iCarouselDataSource, UICollectionVie
     }
     
     func setNavigationTitle() {
-        UIApplication.sharedApplication().setStatusBarStyle(UIStatusBarStyle.LightContent, animated: true)
+        UIApplication.sharedApplication().setStatusBarStyle(UIStatusBarStyle.LightContent, animated: false)
         let titleLabel : UILabel = UILabel(frame: CGRect(x: 0, y: 0, width: 120, height: 32))
         titleLabel.text = "P r o d u c t  M a r k e t"
         titleLabel.font = UIFont(name: "HelvaticaNeue-UltraLight", size: 30.0)
@@ -60,7 +60,7 @@ class HomeViewController: UIViewController, iCarouselDataSource, UICollectionVie
             for(_, item) in json {
                 let name = item["name"].string!
                 let imageUrl = item["imageUrl"].string!
-                let collectionId = item["collectionID"].string!
+                let collectionId = item["collectionID"].int!
                 
                 let trend = Trend(name: name, collectionId: collectionId, imageUrl: imageUrl)
                 
@@ -134,7 +134,7 @@ class HomeViewController: UIViewController, iCarouselDataSource, UICollectionVie
             
             itemView = UIImageView(frame: CGRect(x: 0, y: 0, width: self.view.frame.width - 50, height: 150))
             
-            itemView.layer.cornerRadius = 20
+            itemView.layer.cornerRadius = 10
             itemView.layer.masksToBounds = true
             
             if let url = NSURL(string: showCases[index].imageUrl){
@@ -155,8 +155,17 @@ class HomeViewController: UIViewController, iCarouselDataSource, UICollectionVie
             
             itemView.addSubview(label)
             
-        }else{
+        }
+        else{
             itemView = view as! UIImageView
+            
+            if let url = NSURL(string: showCases[index].imageUrl){
+                if let data = NSData(contentsOfURL: url){
+                    itemView.contentMode = UIViewContentMode.ScaleAspectFill
+                    itemView.image = UIImage(data: data)
+                }
+            }
+            
             label = itemView.viewWithTag(1) as! UILabel
         }
         

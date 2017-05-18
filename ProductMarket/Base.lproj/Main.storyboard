@@ -362,7 +362,7 @@
                                                         </collectionViewFlowLayout>
                                                         <cells>
                                                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="nOm-Je-vo2" customClass="ProductCell" customModule="ProductMarket" customModuleProvider="target">
-                                                                <rect key="frame" x="10" y="17" width="110" height="200"/>
+                                                                <rect key="frame" x="10" y="25" width="110" height="200"/>
                                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                                                     <rect key="frame" x="0.0" y="0.0" width="110" height="200"/>
@@ -667,7 +667,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="مجموعه ها" image="first" id="0KB-4t-R4v"/>
                     <connections>
-                        <outlet property="trendsCollectionView" destination="noP-Cm-Yhz" id="X5U-IM-oGg"/>
+                        <outlet property="trendsCollectionView" destination="noP-Cm-Yhz" id="aQv-41-s1m"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="634-xx-Ug8" userLabel="First Responder" sceneMemberID="firstResponder"/>

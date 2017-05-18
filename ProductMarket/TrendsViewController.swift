@@ -27,7 +27,7 @@
                 for(_, item) in json {
                     let name = item["name"].string!
                     let imageUrl = item["imageUrl"].string!
-                    let collectionId = item["collectionID"].string!
+                    let collectionId = item["collectionID"].int!
                     
                     let trend = Trend(name: name, collectionId: collectionId, imageUrl: imageUrl)
                     
@@ -64,15 +64,15 @@
         }
         
         
-        override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-            if segue.identifier == "ShowTrendProducts"{
-                
-                if let cell = sender as? TrendTableViewCell{
-                    let index = trendsCollectionView.indexPathForCell(cell)
-                    if let destinactionVC = segue.destinationViewController as? TrendProdctsViewController{
-                        destinactionVC.trendId = self.trends[index!.row].collectionId!
-                    }
-                }
-            }
-        }
+//        override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+//            if segue.identifier == "ShowTrendProducts"{
+//                
+//                if let cell = sender as? TrendTableViewCell{
+//                    let index = trendsCollectionView.indexPathForCell(cell)
+//                    if let destinactionVC = segue.destinationViewController as? TrendProdctsViewController{
+//                        destinactionVC.trendId = self.trends[index!.row].collectionId!
+//                    }
+//                }
+//            }
+//        }
     }

@@ -12,7 +12,7 @@ class TrendProdctsViewController: UIViewController, UICollectionViewDataSource {
     
     @IBOutlet weak var productsCollectionView: UICollectionView!
     var products = [TrendProduct]()
-    var trendId : String!
+    var trendId : Int!
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -21,20 +21,17 @@ class TrendProdctsViewController: UIViewController, UICollectionViewDataSource {
     
     func loadProducts()  {
         
-        
+        self.trendId = 1
         RestApiManager.singletonInstance.loadTrendProducts(self.trendId,callBack: {json in
-            
-            _ = json
-            
             
             for(_, item) in json {
                 let name = item["name"].string!
-                let oldPrice = item["oldPrice"].double!
+//                let oldPrice = item["oldPrice"].double!
                 let newPrice = item["newPrice"].double!
                 let imageUrl = item["imageUrl"].string!
                 let detailUrl = item["detailUrl"].string!
                 
-                let product = TrendProduct (name: name, oldPrice: oldPrice, newPrice: newPrice, imageUrl: imageUrl, detailUrl: detailUrl)
+                let product = TrendProduct (name: name, oldPrice: 23, newPrice: newPrice, imageUrl: imageUrl, detailUrl: detailUrl)
                 
                 self.products.append(product)
             }

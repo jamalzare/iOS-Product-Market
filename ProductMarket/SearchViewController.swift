@@ -80,7 +80,7 @@ class SearchViewController: UIViewController, UITableViewDelegate, UISearchBarDe
         }
         
         cell.productNameLabel.text = product.name
-        cell.oldPriceLabel.text = String(format: "%.2f", product.oldPrice)
+//        cell.oldPriceLabel.text = String(format: "%.2f", product.oldPrice)
         cell.newPriceLabel.text = String(format: "%.2f", product.newPrice)
         
         return cell
