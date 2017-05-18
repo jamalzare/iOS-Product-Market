@@ -11,7 +11,7 @@ import UIKit
 
 class HomeViewController: UIViewController, iCarouselDataSource, UICollectionViewDataSource {
     
-   // @IBOutlet weak var bannerViwe: GADBannerView!
+    // @IBOutlet weak var bannerViwe: GADBannerView!
     @IBOutlet weak var carousel: iCarousel!
     
     @IBOutlet weak var bestDealsCollectionView: UICollectionView!
@@ -32,6 +32,20 @@ class HomeViewController: UIViewController, iCarouselDataSource, UICollectionVie
         loadBestDeals()
         loadTodayDeals()
         
+        setNavigationTitle()
+        
+        //loadBannerView()
+    }
+    
+    func setNavigationTitle() {
+        UIApplication.sharedApplication().setStatusBarStyle(UIStatusBarStyle.LightContent, animated: true)
+        let titleLabel : UILabel = UILabel(frame: CGRect(x: 0, y: 0, width: 120, height: 32))
+        titleLabel.text = "P r o d u c t  M a r k e t"
+        titleLabel.font = UIFont(name: "HelvaticaNeue-UltraLight", size: 30.0)
+        self.navigationItem.titleView = titleLabel
+    }
+    
+    func loadBannerView() {
 //        self.bannerViwe.adUnitID = "ca-app-pub-3940256099942544~1458002511"
 //        bannerViwe.rootViewController = self
 //        var request:GADRequest = GADRequest()
@@ -39,7 +53,6 @@ class HomeViewController: UIViewController, iCarouselDataSource, UICollectionVie
     }
     
     func loadShowCases()  {
-        
         
         RestApiManager.singletonInstance.loadShowCases{
             json in
@@ -163,12 +176,12 @@ class HomeViewController: UIViewController, iCarouselDataSource, UICollectionVie
         var product:Product!
         if(collectionView.tag == 1)
         {
-          product = self.bestDeals[indexPath.row]
+            product = self.bestDeals[indexPath.row]
         }
         
         if(collectionView.tag == 2)
         {
-          product = self.todayDeals[indexPath.row]
+            product = self.todayDeals[indexPath.row]
         }
         
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("cell", forIndexPath: indexPath) as! ProductCell
