@@ -74,6 +74,16 @@ class RestApiManager {
         })
     }
     
+    func findProducts(searchText:String, callBack:(JSON)-> Void)  {
+        let url = "http://localhost:5000/api/search?searchText=/\(searchText)/"
+        let escapedUrl = url.stringByAddingPercentEscapesUsingEncoding(NSUTF8StringEncoding)
+        
+        HttpRequest(escapedUrl!, callBack: {
+            json, error in
+            callBack(json as JSON)
+        })
+    }
+    
     func HttpRequest(url: String, callBack: ServiceResponse ){
         
         let request = NSMutableURLRequest(URL:NSURL(string: url)!)

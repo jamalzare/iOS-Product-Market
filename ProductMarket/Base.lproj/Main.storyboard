@@ -21,7 +21,7 @@
                         <segue destination="w6C-zz-y87" kind="relationship" relationship="viewControllers" id="GPv-aO-MJi"/>
                         <segue destination="PDs-h5-LZG" kind="relationship" relationship="viewControllers" id="a5v-su-19q"/>
                         <segue destination="oTV-Ie-zA9" kind="relationship" relationship="viewControllers" id="lAn-s3-A21"/>
-                        <segue destination="sB1-Tf-sQS" kind="relationship" relationship="viewControllers" id="QSH-5w-kay"/>
+                        <segue destination="WKt-CL-ikJ" kind="relationship" relationship="viewControllers" id="QSH-5w-kay"/>
                         <segue destination="oLE-CI-RYk" kind="relationship" relationship="viewControllers" id="J9o-Qk-t99"/>
                     </connections>
                 </tabBarController>
@@ -667,7 +667,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="634-xx-Ug8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="79" y="-582"/>
+            <point key="canvasLocation" x="611" y="-582"/>
         </scene>
         <!--Trend Prodcts View Controller-->
         <scene sceneID="HCn-9x-Fpe">
@@ -762,9 +762,9 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Zf-C5-Byz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="433" y="-582"/>
+            <point key="canvasLocation" x="965" y="-582"/>
         </scene>
-        <!--جستجو-->
+        <!--Search View Controller-->
         <scene sceneID="7lS-bh-WdW">
             <objects>
                 <viewController id="sB1-Tf-sQS" customClass="SearchViewController" customModule="ProductMarket" customModuleProvider="target" sceneMemberID="viewController">
@@ -775,13 +775,100 @@
                     <view key="view" contentMode="scaleToFill" id="Vaa-ZJ-IV6">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="Uxg-M7-0wx">
+                                <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="k0b-YN-Gqz"/>
+                                </constraints>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="sB1-Tf-sQS" id="Low-S4-Ejb"/>
+                                </connections>
+                            </searchBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="110" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="G7Y-Mk-7Nb">
+                                <rect key="frame" x="0.0" y="64" width="320" height="455"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" rowHeight="110" id="YUX-fw-yL3" customClass="CompanyProductCell" customModule="ProductMarket" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="320" height="110"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="YUX-fw-yL3" id="Jdf-er-eHn">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="109"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="I9b-c3-eyh">
+                                                    <rect key="frame" x="10" y="10" width="90" height="90"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="90" id="71V-Zx-ner"/>
+                                                        <constraint firstAttribute="width" constant="90" id="pfh-JA-CHQ"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IC4-kt-OVQ">
+                                                    <rect key="frame" x="110" y="10" width="200" height="40"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="40" id="3j7-1z-NHd"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h1M-qH-pWv">
+                                                    <rect key="frame" x="110" y="80" width="60" height="20"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="20" id="4S2-nK-66b"/>
+                                                        <constraint firstAttribute="width" constant="60" id="RaQ-UG-wg5"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="IC4-kt-OVQ" secondAttribute="trailing" constant="10" id="HDh-EW-31n"/>
+                                                <constraint firstItem="I9b-c3-eyh" firstAttribute="leading" secondItem="Jdf-er-eHn" secondAttribute="leading" constant="10" id="c88-Nh-rey"/>
+                                                <constraint firstItem="IC4-kt-OVQ" firstAttribute="top" secondItem="Jdf-er-eHn" secondAttribute="top" constant="10" id="g1V-IM-0Rz"/>
+                                                <constraint firstItem="I9b-c3-eyh" firstAttribute="top" secondItem="Jdf-er-eHn" secondAttribute="top" constant="10" id="gKR-yo-Pol"/>
+                                                <constraint firstItem="h1M-qH-pWv" firstAttribute="leading" secondItem="I9b-c3-eyh" secondAttribute="trailing" constant="10" id="nbg-af-62G"/>
+                                                <constraint firstAttribute="bottom" secondItem="h1M-qH-pWv" secondAttribute="bottom" constant="9" id="v5j-DR-Zth"/>
+                                                <constraint firstItem="IC4-kt-OVQ" firstAttribute="leading" secondItem="I9b-c3-eyh" secondAttribute="trailing" constant="10" id="vEb-X5-RcI"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="newPriceLabel" destination="h1M-qH-pWv" id="bmD-VL-FW8"/>
+                                            <outlet property="productImageView" destination="I9b-c3-eyh" id="ulz-Yr-k4t"/>
+                                            <outlet property="productNameLabel" destination="IC4-kt-OVQ" id="oth-Na-nzP"/>
+                                            <segue destination="sWI-PU-SHK" kind="show" identifier="ShowProductDetail" id="xif-kM-P1L"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="sB1-Tf-sQS" id="hfs-Ti-WxK"/>
+                                    <outlet property="delegate" destination="sB1-Tf-sQS" id="b0d-uW-qvn"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="G7Y-Mk-7Nb" firstAttribute="top" secondItem="Uxg-M7-0wx" secondAttribute="bottom" id="9un-0e-gZ3"/>
+                            <constraint firstItem="scd-ax-qia" firstAttribute="top" secondItem="G7Y-Mk-7Nb" secondAttribute="bottom" id="Bg3-9J-CZu"/>
+                            <constraint firstItem="Uxg-M7-0wx" firstAttribute="top" secondItem="QcZ-de-g8w" secondAttribute="bottom" id="EUQ-gr-jQd"/>
+                            <constraint firstItem="Uxg-M7-0wx" firstAttribute="leading" secondItem="Vaa-ZJ-IV6" secondAttribute="leading" id="GLO-09-gYt"/>
+                            <constraint firstAttribute="trailing" secondItem="G7Y-Mk-7Nb" secondAttribute="trailing" id="nBf-4y-DaW"/>
+                            <constraint firstAttribute="trailing" secondItem="Uxg-M7-0wx" secondAttribute="trailing" id="rZy-5G-gtH"/>
+                            <constraint firstItem="G7Y-Mk-7Nb" firstAttribute="leading" secondItem="Vaa-ZJ-IV6" secondAttribute="leading" id="vlZ-Ib-h1e"/>
+                        </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="جستجو" image="first" id="55S-bV-0Gf"/>
+                    <navigationItem key="navigationItem" id="Sd6-RR-bgC"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="productsTableView" destination="G7Y-Mk-7Nb" id="Z0W-YA-RVZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TA3-Kg-Pwc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-294" y="-582"/>
+            <point key="canvasLocation" x="54" y="-582"/>
         </scene>
         <!--شرکت ها-->
         <scene sceneID="wPM-IM-8zB">
@@ -822,11 +909,30 @@
             </objects>
             <point key="canvasLocation" x="-1016" y="118"/>
         </scene>
+        <!--جستجو-->
+        <scene sceneID="kJu-Z0-AZL">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="WKt-CL-ikJ" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="جستجو" image="first" id="55S-bV-0Gf"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="YCU-16-duh">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="sB1-Tf-sQS" kind="relationship" relationship="rootViewController" id="v7r-eq-c4T"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="m2j-Oh-CTO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-294" y="-582"/>
+        </scene>
     </scenes>
     <resources>
         <image name="first" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="rm7-7t-Ge5"/>
+        <segue reference="xif-kM-P1L"/>
     </inferredMetricsTieBreakers>
 </document>
