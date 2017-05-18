@@ -16,6 +16,15 @@ class CompaniesViewController: UIViewController, UICollectionViewDataSource {
     override func viewDidLoad() {
         super.viewDidLoad()
         loadStores()
+        setNavigationTitle()
+    }
+    
+    func setNavigationTitle() {
+        UIApplication.sharedApplication().setStatusBarStyle(UIStatusBarStyle.LightContent, animated: true)
+        let titleLabel : UILabel = UILabel(frame: CGRect(x: 0, y: 0, width: 120, height: 32))
+        titleLabel.text = "کمپانی ها"
+        titleLabel.font = UIFont(name: "HelvaticaNeue-UltraLight", size: 30.0)
+        self.navigationItem.titleView = titleLabel
     }
     
     func loadStores() {

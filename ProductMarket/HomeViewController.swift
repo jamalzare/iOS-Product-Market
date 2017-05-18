@@ -57,7 +57,6 @@ class HomeViewController: UIViewController, iCarouselDataSource, UICollectionVie
         RestApiManager.singletonInstance.loadShowCases{
             json in
             
-            
             for(_, item) in json {
                 let name = item["name"].string!
                 let imageUrl = item["imageUrl"].string!
@@ -75,7 +74,6 @@ class HomeViewController: UIViewController, iCarouselDataSource, UICollectionVie
     }
     
     func loadBestDeals()  {
-        
         
         RestApiManager.singletonInstance.loadBestDeals{
             json in
@@ -99,7 +97,6 @@ class HomeViewController: UIViewController, iCarouselDataSource, UICollectionVie
     }
     
     func loadTodayDeals()  {
-        
         
         RestApiManager.singletonInstance.loadTodayDeals{
             json in
@@ -131,11 +128,18 @@ class HomeViewController: UIViewController, iCarouselDataSource, UICollectionVie
         var label: UILabel
         var itemView: UIImageView
         
+       
+        
         if(view == nil){
+            
             itemView = UIImageView(frame: CGRect(x: 0, y: 0, width: self.view.frame.width - 50, height: 150))
+            
+            itemView.layer.cornerRadius = 20
+            itemView.layer.masksToBounds = true
+            
             if let url = NSURL(string: showCases[index].imageUrl){
                 if let data = NSData(contentsOfURL: url){
-                    itemView.contentMode = UIViewContentMode.ScaleAspectFit
+                    itemView.contentMode = UIViewContentMode.ScaleAspectFill
                     itemView.image = UIImage(data: data)
                 }
             }

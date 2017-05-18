@@ -21,8 +21,16 @@ class ProductDetailsViewController: UIViewController {
         let request  = NSURLRequest(URL: url!)
         webView.loadRequest(request)
 
+        setNavigationTitle()
         // Do any additional setup after loading the view.
     }
 
+    func setNavigationTitle() {
+        UIApplication.sharedApplication().setStatusBarStyle(UIStatusBarStyle.LightContent, animated: true)
+        let titleLabel : UILabel = UILabel(frame: CGRect(x: 0, y: 0, width: 120, height: 32))
+        titleLabel.text = "مشخصات محصول"
+        titleLabel.font = UIFont(name: "HelvaticaNeue-UltraLight", size: 30.0)
+        self.navigationItem.titleView = titleLabel
+    }
     
 }
