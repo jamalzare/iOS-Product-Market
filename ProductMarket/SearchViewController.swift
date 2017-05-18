@@ -15,19 +15,28 @@ class SearchViewController: UIViewController, UITableViewDelegate, UISearchBarDe
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.productsTableView.tableFooterView = UIView()
+        setNavigationTitle()
     }
     
     func searchBar(searchBar: UISearchBar, textDidChange searchText: String) {
         findProducts(searchText)
     }
     
+    func setNavigationTitle() {
+        UIApplication.sharedApplication().setStatusBarStyle(UIStatusBarStyle.LightContent, animated: true)
+        let titleLabel : UILabel = UILabel(frame: CGRect(x: 0, y: 0, width: 120, height: 32))
+        titleLabel.text = "جستجوی محصول"
+        titleLabel.font = UIFont(name: "HelvaticaNeue-UltraLight", size: 30.0)
+        self.navigationItem.titleView = titleLabel
+    }
+    
     func findProducts(searchText: String){
         
         products = [Product]()
-        
+        productsTableView.reloadData()
         if(searchText == ""){
-            productsTableView.reloadData()
+            
             return
         }
         
