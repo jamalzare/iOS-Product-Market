@@ -79,7 +79,7 @@ class SearchViewController: UIViewController, UITableViewDelegate, UISearchBarDe
     
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if segue.identifier == "ShowDetail"{
+        if segue.identifier == "ShowProductDetail"{
             
             if let cell = sender as? CompanyProductCell{
                 let index = productsTableView.indexPathForCell(cell)
