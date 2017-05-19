@@ -8,9 +8,10 @@
 
 import UIKit
 
-class TrendProdctsViewController: UIViewController, UICollectionViewDataSource {
+class TrendProdctsViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
     
     @IBOutlet weak var productsCollectionView: UICollectionView!
+
     var products = [TrendProduct]()
     var trendId : Int!
     override func viewDidLoad() {
@@ -63,7 +64,7 @@ class TrendProdctsViewController: UIViewController, UICollectionViewDataSource {
         }
         
         
-        cell.oldPriceLabel.text = String(format: "%.2f", product.oldPrice)
+        cell.productNameLabel.text = product.name
         cell.newPriceLabel.text = String(format: "%.2f", product.newPrice)
         
         return cell

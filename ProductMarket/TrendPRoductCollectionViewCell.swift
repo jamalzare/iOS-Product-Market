@@ -10,6 +10,8 @@ import UIKit
 
 class TrendProductCollectionViewCell: UICollectionViewCell {
     
+    @IBOutlet weak var productNameLabel: UILabel!
+    
     @IBOutlet weak var productImageView: UIImageView!
     @IBOutlet weak var newPriceLabel: UILabel!
     
