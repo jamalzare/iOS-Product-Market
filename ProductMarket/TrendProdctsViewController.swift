@@ -51,7 +51,7 @@ class TrendProdctsViewController: UIViewController, UICollectionViewDataSource {
     
     
     internal func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell{
-        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("cell", forIndexPath: indexPath) as! TrendPRoductCollectionViewCell
+        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("cell", forIndexPath: indexPath) as! TrendProductCollectionViewCell
         
         let product = self.products[indexPath.row]
         
@@ -81,7 +81,7 @@ class TrendProdctsViewController: UIViewController, UICollectionViewDataSource {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "ShowProductDetail"{
             
-            if let cell = sender as? TrendPRoductCollectionViewCell{
+            if let cell = sender as? TrendProductCollectionViewCell{
                 let index = productsCollectionView.indexPathForCell(cell)
                 if let destinactionVC = segue.destinationViewController as? ProductDetailsViewController{
                     destinactionVC.detailUrl = self.products[index!.row].detailUrl!

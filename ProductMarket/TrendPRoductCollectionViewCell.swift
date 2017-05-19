@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TrendPRoductCollectionViewCell: UICollectionViewCell {
+class TrendProductCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var productImageView: UIImageView!
     @IBOutlet weak var newPriceLabel: UILabel!

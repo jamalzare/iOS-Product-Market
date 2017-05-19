@@ -9,10 +9,10 @@
 /* Begin PBXBuildFile section */
 		893906571ECE289A00D2197D /* TrendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893906561ECE289A00D2197D /* TrendsViewController.swift */; };
 		894655751EC751E400656254 /* ProductDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894655741EC751E400656254 /* ProductDetailsViewController.swift */; };
-		894655771EC8A71600656254 /* TrendTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894655761EC8A71600656254 /* TrendTableViewCell.swift */; };
+		894655771EC8A71600656254 /* TrendCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894655761EC8A71600656254 /* TrendCollectionViewCell.swift */; };
 		894655791EC8A89300656254 /* Trend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894655781EC8A89300656254 /* Trend.swift */; };
 		8946557B1ECA3AAC00656254 /* TrendProdctsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8946557A1ECA3AAC00656254 /* TrendProdctsViewController.swift */; };
-		8946557D1ECA3E3300656254 /* TrendPRoductCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8946557C1ECA3E3300656254 /* TrendPRoductCollectionViewCell.swift */; };
+		8946557D1ECA3E3300656254 /* TrendProductCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8946557C1ECA3E3300656254 /* TrendProductCollectionViewCell.swift */; };
 		8946557F1ECB2CBA00656254 /* TrendProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8946557E1ECB2CBA00656254 /* TrendProduct.swift */; };
 		895CD0341EC0F6DF0080EE92 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 895CD0331EC0F6DF0080EE92 /* AppDelegate.swift */; };
 		895CD03B1EC0F6DF0080EE92 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 895CD0391EC0F6DF0080EE92 /* Main.storyboard */; };
@@ -37,10 +37,10 @@
 /* Begin PBXFileReference section */
 		893906561ECE289A00D2197D /* TrendsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrendsViewController.swift; sourceTree = "<group>"; };
 		894655741EC751E400656254 /* ProductDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductDetailsViewController.swift; sourceTree = "<group>"; };
-		894655761EC8A71600656254 /* TrendTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrendTableViewCell.swift; sourceTree = "<group>"; };
+		894655761EC8A71600656254 /* TrendCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrendCollectionViewCell.swift; sourceTree = "<group>"; };
 		894655781EC8A89300656254 /* Trend.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Trend.swift; sourceTree = "<group>"; };
 		8946557A1ECA3AAC00656254 /* TrendProdctsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrendProdctsViewController.swift; sourceTree = "<group>"; };
-		8946557C1ECA3E3300656254 /* TrendPRoductCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrendPRoductCollectionViewCell.swift; sourceTree = "<group>"; };
+		8946557C1ECA3E3300656254 /* TrendProductCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrendProductCollectionViewCell.swift; sourceTree = "<group>"; };
 		8946557E1ECB2CBA00656254 /* TrendProduct.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrendProduct.swift; sourceTree = "<group>"; };
 		895CD0301EC0F6DF0080EE92 /* ProductMarket.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProductMarket.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		895CD0331EC0F6DF0080EE92 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -143,8 +143,8 @@
 			children = (
 				895CD0581EC10E3E0080EE92 /* CustomCompanyCell.swift */,
 				89FDCBA21EC4E75B000868C4 /* CompanyProductCell.swift */,
-				894655761EC8A71600656254 /* TrendTableViewCell.swift */,
-				8946557C1ECA3E3300656254 /* TrendPRoductCollectionViewCell.swift */,
+				894655761EC8A71600656254 /* TrendCollectionViewCell.swift */,
+				8946557C1ECA3E3300656254 /* TrendProductCollectionViewCell.swift */,
 				89E73BB91ECB8F5300F5AE29 /* ProductCell.swift */,
 			);
 			name = CustomCells;
@@ -260,7 +260,7 @@
 				895CD0591EC10E3E0080EE92 /* CustomCompanyCell.swift in Sources */,
 				895CD0561EC10C560080EE92 /* Companies.swift in Sources */,
 				895CD0531EC0F8B70080EE92 /* AboutViewController.swift in Sources */,
-				894655771EC8A71600656254 /* TrendTableViewCell.swift in Sources */,
+				894655771EC8A71600656254 /* TrendCollectionViewCell.swift in Sources */,
 				894655751EC751E400656254 /* ProductDetailsViewController.swift in Sources */,
 				89FDCBA31EC4E75B000868C4 /* CompanyProductCell.swift in Sources */,
 				897B7B7F1EC3A4CA002BB76E /* SwiftyJSON.swift in Sources */,
@@ -269,7 +269,7 @@
 				89FDCBA11EC4E60C000868C4 /* CompanyProductsViewController.swift in Sources */,
 				8946557F1ECB2CBA00656254 /* TrendProduct.swift in Sources */,
 				89E73BB51ECB6FCD00F5AE29 /* iCarousel.m in Sources */,
-				8946557D1ECA3E3300656254 /* TrendPRoductCollectionViewCell.swift in Sources */,
+				8946557D1ECA3E3300656254 /* TrendProductCollectionViewCell.swift in Sources */,
 				895CD0341EC0F6DF0080EE92 /* AppDelegate.swift in Sources */,
 				895CD04B1EC0F84D0080EE92 /* HomeViewController.swift in Sources */,
 				895CD05C1EC1111E0080EE92 /* RestApiManager.swift in Sources */,

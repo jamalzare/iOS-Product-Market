@@ -10,7 +10,8 @@
     
     class TrendsViewController: UIViewController, UITableViewDataSource {
         
-        @IBOutlet weak var trendsCollectionView: UITableView!
+        
+        @IBOutlet weak var trendTableView: UITableView!
         
         var trends = [Trend]()
         override func viewDidLoad() {
@@ -18,6 +19,14 @@
             // translatesAutoresizingMaskIntoConstraints = true
             
             loadTrends()
+        }
+        
+        func setNavigationTitle() {
+            UIApplication.sharedApplication().setStatusBarStyle(UIStatusBarStyle.LightContent, animated: false)
+            let titleLabel : UILabel = UILabel(frame: CGRect(x: 0, y: 0, width: 120, height: 32))
+            titleLabel.text = "مجموعه ها"
+            titleLabel.font = UIFont(name: "HelvaticaNeue-UltraLight", size: 30.0)
+            self.navigationItem.titleView = titleLabel
         }
         
         func loadTrends()  {
@@ -34,7 +43,7 @@
                     self.trends.append(trend)
                 }
                 dispatch_async(dispatch_get_main_queue()){
-                    self.trendsCollectionView.reloadData()
+                    self.trendTableView.reloadData()
                 }
                 
             }
@@ -43,9 +52,6 @@
         func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
             return trends.count
         }
-        
-        
-        
         
         internal func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell{
             
@@ -64,15 +70,18 @@
         }
         
         
-//        override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-//            if segue.identifier == "ShowTrendProducts"{
-//                
-//                if let cell = sender as? TrendTableViewCell{
-//                    let index = trendsCollectionView.indexPathForCell(cell)
-//                    if let destinactionVC = segue.destinationViewController as? TrendProdctsViewController{
-//                        destinactionVC.trendId = self.trends[index!.row].collectionId!
-//                    }
-//                }
-//            }
-//        }
+        override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+            if segue.identifier == "ShowTrendProducts"{
+                
+                if let cell = sender as? TrendTableViewCell{
+                    
+                    let index = trendTableView.indexPathForCell(cell)
+                    
+                    if let destinationVC = segue.destinationViewController as? TrendProdctsViewController {
+                        
+                        destinationVC.trendId = self.trends[index!.row].collectionId
+                    }
+                }
+            }
+        }
     }

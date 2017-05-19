@@ -38,11 +38,15 @@ class HomeViewController: UIViewController, iCarouselDataSource, UICollectionVie
     }
     
     func setNavigationTitle() {
+      
         UIApplication.sharedApplication().setStatusBarStyle(UIStatusBarStyle.LightContent, animated: false)
         let titleLabel : UILabel = UILabel(frame: CGRect(x: 0, y: 0, width: 120, height: 32))
         titleLabel.text = "P r o d u c t  M a r k e t"
         titleLabel.font = UIFont(name: "HelvaticaNeue-UltraLight", size: 30.0)
         self.navigationItem.titleView = titleLabel
+        
+       
+        
     }
     
     func loadBannerView() {

@@ -16,7 +16,7 @@ class ProductDetailsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+       // self.detailUrl = "https://jobinja.ir"
         let url = NSURL(string: detailUrl)
         let request  = NSURLRequest(URL: url!)
         webView.loadRequest(request)
