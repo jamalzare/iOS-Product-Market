@@ -4,4 +4,9 @@ this Project Uses RJProject web Application if u want to run u have to run the R
 RJPRoject is an .netCore mvc project 
 but u can see some screen shots here for projects
 
-![img](https://github.com/jamalzare/iOS-Product-Market/blob/master/1.png)
+![img]()
+
+<div align="center">
+        <img width="45%" src="https://github.com/jamalzare/iOS-Product-Market/blob/master/1.png" alt="About screen" title="About screen"</img>
+        
+</div>
