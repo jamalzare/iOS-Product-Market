@@ -16,10 +16,8 @@ but u can see some screen shots here for projects
         <img width="45%" src="https://github.com/jamalzare/iOS-Product-Market/blob/master/4.png" />
         __
         <img width="45%" src="https://github.com/jamalzare/iOS-Product-Market/blob/master/5.png" />
-        
         __
         <img width="45%" src="https://github.com/jamalzare/iOS-Product-Market/blob/master/6.png" />
         __
         <img width="45%" src="https://github.com/jamalzare/iOS-Product-Market/blob/master/7.png" />
-        
 </div>
