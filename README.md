@@ -8,7 +8,18 @@ but u can see some screen shots here for projects
 
 <div align="center">
         <img width="45%" src="https://github.com/jamalzare/iOS-Product-Market/blob/master/1.png"/>
-        0000
-        <img width="45%" src="https://github.com/jamalzare/iOS-Product-Market/blob/master/2.png"></img>
+        __
+        <img width="45%" src="https://github.com/jamalzare/iOS-Product-Market/blob/master/2.png" />
+        __
+        <img width="45%" src="https://github.com/jamalzare/iOS-Product-Market/blob/master/3.png" />
+        __
+        <img width="45%" src="https://github.com/jamalzare/iOS-Product-Market/blob/master/4.png" />
+        __
+        <img width="45%" src="https://github.com/jamalzare/iOS-Product-Market/blob/master/5.png" />
+        
+        __
+        <img width="45%" src="https://github.com/jamalzare/iOS-Product-Market/blob/master/6.png" />
+        __
+        <img width="45%" src="https://github.com/jamalzare/iOS-Product-Market/blob/master/7.png" />
         
 </div>
